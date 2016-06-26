@@ -30,7 +30,7 @@
   <%= @course.upper_limit %>
 </p>
 
-<%= render partial: 'participants_list', locals: { participants: Participant.where(course_id: @course.id) } %>
+<%= render partial: 'participants_list', locals: { participants: @course.participants } %>
 
 <%= render partial: 'new_participant', locals: { participant: Participant.new(course_id: @course.id) } %>
 
